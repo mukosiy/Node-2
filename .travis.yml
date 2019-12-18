@@ -8,4 +8,4 @@ notifications:
 deploy:
   provider: heroku
   api_key: $api_key
-  app: nodejskpi
+  app: shrouded-depths-75124
