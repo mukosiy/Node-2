@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+    <meta charset="utf-8">
+    <TITLE> Обчислення максимального значення</TITLE>
+    <script>
+        function numb(obj) {
+
+            var a = Number(obj.num1.value);
+            var b = Number(obj.num2.value);
+            var c = Number(obj.num3.value);
+            var d = Number(obj.num4.value);
+            var f = Number(obj.num5.value);
+            var m = a
+            var z = 1
+            if (b == m) {
+                z++;
+            }
+
+            if (b > m) {
+                m = b;
+                z = 1;
+            }
+            if (c == m) {
+                z++;
+            }
+            if (c > m) {
+                m = g;
+                z = 1;
+            }
+            if (d == m) {
+                z++;
+            }
+            if (d > m) {
+                m = d;
+                z = 1;
+            }
+            if (f == m) {
+                z++;
+            }
+            if (f > m) {
+                m = f;
+                z = 1;
+            }
+            if (z == 5) z = 0
+
+            obj.res.value = z;
+        }
+
+        function tr(obj) {
+
+            var a = Number(obj.num1.value);
+            var b = Number(obj.num2.value);
+            var c = Number(obj.num3.value);
+
+            if ((a + b) > c && (a + c) > b && (b + c) > a) {
+                obj.res.value = "Можемо побудувати трикутник"
+            } else {
+                obj.res.value = "Трикутник не може бути побудованим"
+            }
+        }
+
+        function Co(obj) {
+
+            var x = Number(obj.num1.value);
+            var y = Number(obj.num2.value);
+
+
+            if (x > 0 && y > 0) {
+                obj.res.value = "1"
+            }
+            if (x < 0 && y < 0) {
+                obj.res.value = "3"
+            }
+            if (x > 0 && y < 0) {
+                obj.res.value = "4"
+            }
+            if (x < 0 && y > 0) {
+                obj.res.value = "2"
+            }
+        }
+    </script>
+</HEAD>
+
+<BODY>
+
+    <FORM name="form1">
+        <input type="text" size=5 name="num1">
+        <input type="text" size=5 name="num2">
+        <input type="text" size=5 name="num3">
+        <input type="text" size=5 name="num4">
+        <input type="text" size=5 name="num5"><br> К-сть максимальних значень = <input type="text" size=5 name="res"><br>
+        <input type="button" value="Визначити" onClick="numb(form1)">
+        <input type="reset">
+    </FORM>
+    <P>Трикутник</P>
+    <FORM name="form2">
+        <input type="text" size=5 name="num1">
+        <input type="text" size=5 name="num2">
+        <input type="text" size=5 name="num3"><br>
+        <input type="text" size=30 name="res"><br>
+        <input type="button" value="Визначити" onClick="tr(form2)">
+        <input type="reset">
+    </FORM>
+    <P>Чверть</P>
+    <FORM name="form3">
+        <input type="text" size=5 name="num1">
+        <input type="text" size=5 name="num2"><br>
+        <input type="text" size=3 name="res"><br>
+        <input type="button" value="Визначити" onClick="Co(form3)">
+        <input type="reset">
+    </FORM>
+</BODY>
+
+</HTML>
